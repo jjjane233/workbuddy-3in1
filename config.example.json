@@ -1,0 +1,112 @@
+{
+  "listen": ":7863",
+  "api_key": "test_key",
+  "auth_dir": "./auths",
+  "state_file": "./data/state.json",
+  "panel": {
+    "package_detail_limit": 5,
+    "public_base_url": "",
+    "trae_relay_port": 17654
+  },
+  "logging": {
+    "request_archive_enabled": true,
+    "request_retention_days": 7,
+    "request_archive_max_mb": 100,
+    "request_client_info": true
+  },
+  "cooldown": {
+    "soft_rate": "600s",
+    "soft_rate_max": "2h"
+  },
+  "schedule": {
+    "checkin_hours": [9, 21],
+    "growth_hours": [1],
+    "travel_hours": [9, 21],
+    "activity_hours": [10],
+    "keepalive_hours": [22],
+    "blackcat_hours": [23],
+    "checkin_enabled": true,
+    "growth_enabled": true,
+    "travel_enabled": true,
+    "activity_enabled": true,
+    "keepalive_enabled": true,
+    "blackcat_enabled": true,
+    "balance_refresh_enabled": true,
+    "balance_refresh_minutes": 5
+  },
+  "upstream_schedule": {
+    "enabled": true,
+    "trae_checkin_hours": [9, 21],
+    "trae_activity_hour": 10,
+    "trae_activity_minutes": 30,
+    "trae_keepalive_hour": 22,
+    "trae_usage_minutes": 30,
+    "zcode_claim_hours": [3],
+    "zcode_preview_minutes": 30,
+    "zcode_reward_minutes": 60,
+    "zcode_balance_minutes": 5,
+    "tick_minutes": 1
+  },
+  "global": {
+    "enabled": true,
+    "chat_base": "",
+    "billing_base": ""
+  },
+  "upstream": {
+    "timeout_seconds": 120,
+    "header_timeout_seconds": 120,
+    "idle_timeout_seconds": 300,
+    "user_agent": "",
+    "client_version": "",
+    "cli_version": "",
+    "client_name": "",
+    "device_token": "",
+    "device_token_file": "",
+    "passthrough_ip": false,
+    "max_attempts": 6
+  },
+  "features": {
+    "sanitize_blacklist_fingerprints": true,
+    "zcode_credit_per_1k": 0.1
+  },
+  "prompt": {
+    "mode": "passthrough",
+    "file": ""
+  },
+  "captcha": {
+    "enabled": false,
+    "node": "node",
+    "script": "captcha_node/solver_chrome.js",
+    "cmd_prefix": [],
+    "ttl": "45s",
+    "timeout": "90s",
+    "retries": 3,
+    "home": "",
+    "env": []
+  },
+  "upstash": {
+    "url": "",
+    "token": ""
+  },
+  "pool": {
+    "max_in_flight": 3,
+    "max_in_flight_global": 2,
+    "breaker_threshold": 3,
+    "breaker_cooldown": "30m",
+    "breaker_cooldown_max": "6h",
+    "degrade_threshold": 5,
+    "degrade_cooldown": "10m",
+    "degrade_cooldown_max": "2h",
+    "idle_weight_per_hour": 0.5,
+    "idle_weight_max": 5.0,
+    "prefer_expiring": true,
+    "expiring_soon": "168h",
+    "cost_explore_interval": "30m",
+    "credit_floor": 100
+  },
+  "session_sticky": {
+    "enabled": true,
+    "ttl": "30m",
+    "gc_interval": "5m"
+  }
+}

@@ -1,0 +1,41 @@
+# 凭证与账号数据（绝对不要进版本库）
+auths/
+data/
+backups/
+*.key
+*.pem
+.env
+.env.*
+
+# 真实配置（含 api_key / Upstash token，用 config.example.json 代替）
+config.json
+
+# 构建产物与二进制（只保留源码）
+/wb2api
+/wb2api.exe
+/login
+/login.exe
+/credit
+/credit.exe
+/signin_bin
+server.exe
+*.tmp
+*.zip
+__pycache__/
+node_modules/
+
+# 本地设计/计划草稿
+docs/
+LOOP.md
+PLAN.md
+SPEC.md
+
+# 说明文档以外的 markdown 一律不进版本库（README.md 例外）
+*.md
+!README.md
+# 构建资产：prompt.go 用 go:embed 引用，缺失会导致 go build ./... 直接失败
+!internal/prompt/defaultprompt.md
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,9 @@
+{
+  "name": "workbuddy2api-captcha-solver",
+  "version": "1.0.0",
+  "private": true,
+  "description": "阿里云无痕验证求解器（CDP 驱动 Chrome）",
+  "type": "commonjs",
+  "main": "solver_chrome.js",
+  "dependencies": { "ws": "^8.18.0" }
+}
